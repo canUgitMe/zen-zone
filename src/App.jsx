@@ -34,18 +34,20 @@ const App = () => {
     if (!validate()) return;
 
     const hour = parseInt(time.split(':')[0], 10);
-    let videoPath = '/videos/morning.mp4';
-    let audioPath = '/audio/morning.mp3';
+    const basePath = process.env.PUBLIC_URL;
+
+    let videoPath = `${basePath}/videos/morning.mp4`;
+    let audioPath = `${basePath}/audio/morning.mp3`;
 
     if (hour >= 5 && hour < 12) {
-      videoPath = '/videos/morning.mp4';
-      audioPath = '/audio/morning.mp3';
+      videoPath = `${basePath}/videos/morning.mp4`;
+      audioPath = `${basePath}/audio/morning.mp3`;
     } else if (hour >= 12 && hour < 18) {
-      videoPath = '/videos/evening.mp4';
-      audioPath = '/audio/evening.mp3';
+      videoPath = `${basePath}/videos/evening.mp4`;
+      audioPath = `${basePath}/audio/evening.mp3`;
     } else {
-      videoPath = '/videos/night.mp4';
-      audioPath = '/audio/night.mp3';
+      videoPath = `${basePath}/videos/night.mp4`;
+      audioPath = `${basePath}/audio/night.mp3`;
     }
 
     setMedia({ video: videoPath, audio: audioPath });
