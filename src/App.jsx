@@ -30,29 +30,29 @@ const App = () => {
     return valid;
   };
 
-  const handleStart = () => {
-    if (!validate()) return;
+ const handleStart = () => {
+  if (!validate()) return;
 
-    const hour = parseInt(time.split(':')[0], 10);
-    const basePath = process.env.PUBLIC_URL;
+  const hour = parseInt(time.split(':')[0], 10);
+  const base = process.env.PUBLIC_URL;
 
-    let videoPath = `${basePath}/videos/morning.mp4`;
-    let audioPath = `${basePath}/audio/morning.mp3`;
+  let videoPath = `${base}/videos/morning.mp4`;
+  let audioPath = `${base}/audio/morning.mp3`;
 
-    if (hour >= 5 && hour < 12) {
-      videoPath = `${basePath}/videos/morning.mp4`;
-      audioPath = `${basePath}/audio/morning.mp3`;
-    } else if (hour >= 12 && hour < 18) {
-      videoPath = `${basePath}/videos/evening.mp4`;
-      audioPath = `${basePath}/audio/evening.mp3`;
-    } else {
-      videoPath = `${basePath}/videos/night.mp4`;
-      audioPath = `${basePath}/audio/night.mp3`;
-    }
+  if (hour >= 5 && hour < 12) {
+    videoPath = `${base}/videos/morning.mp4`;
+    audioPath = `${base}/audio/morning.mp3`;
+  } else if (hour >= 12 && hour < 18) {
+    videoPath = `${base}/videos/evening.mp4`;
+    audioPath = `${base}/audio/evening.mp3`;
+  } else {
+    videoPath = `${base}/videos/night.mp4`;
+    audioPath = `${base}/audio/night.mp3`;
+  }
 
-    setMedia({ video: videoPath, audio: audioPath });
-    setStarted(true);
-  };
+  setMedia({ video: videoPath, audio: audioPath });
+  setStarted(true);
+};
 
   return (
     <div className="app">
