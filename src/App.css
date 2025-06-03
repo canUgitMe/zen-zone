@@ -1,38 +1,147 @@
-.App {
+/* Global Reset */
+body, html, .app {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: black;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* App Container */
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Welcome Page Overlay */
+.welcome-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('C:\Users\ARIJIT ADHIKARY\Desktop\VsCode\zen-zone\public\images\welcome-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Centered Box */
+.welcome-box {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 20px;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  color: white;
+  width: 320px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Welcome Heading */
+.welcome-box h1 {
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Highlight */
+.zen-highlight {
+  color: #424b4e;
+}
+
+/* Required Asterisk */
+.required {
+  color: red;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+/* Labels and Input Container */
+.welcome-box label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+/* Input Fields */
+.welcome-box input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: #ffffff;
+  color: #000;
+}
+
+/* Error Input */
+.input-error {
+  border: 2px solid #ff4d4d !important;
+}
+
+/* Error Message */
+.error-message {
+  color: #ff4d4d;
+  font-size: 13px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-weight: 600;
+  width: 100%;
+}
+
+/* Start Button */
+.welcome-box button {
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 0px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background-color: #20bdf1;
   color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  align-self: center;
 }
 
-.App-link {
-  color: #61dafb;
+.welcome-box button:hover {
+  background-color: #009acd;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Background Video */
+.bg-video {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background-color: black;
 }
