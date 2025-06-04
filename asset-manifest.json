@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/zen-zone/static/css/main.862973ab.css",
-    "main.js": "/zen-zone/static/js/main.05ca660c.js",
+    "main.css": "/zen-zone/static/css/main.5a8ce0c4.css",
+    "main.js": "/zen-zone/static/js/main.8be39685.js",
     "static/js/453.d5e8e657.chunk.js": "/zen-zone/static/js/453.d5e8e657.chunk.js",
     "static/media/welcome-bg.jpg": "/zen-zone/static/media/welcome-bg.439d8177f66c7c224d6c.jpg",
     "index.html": "/zen-zone/index.html",
-    "main.862973ab.css.map": "/zen-zone/static/css/main.862973ab.css.map",
-    "main.05ca660c.js.map": "/zen-zone/static/js/main.05ca660c.js.map",
+    "main.5a8ce0c4.css.map": "/zen-zone/static/css/main.5a8ce0c4.css.map",
+    "main.8be39685.js.map": "/zen-zone/static/js/main.8be39685.js.map",
     "453.d5e8e657.chunk.js.map": "/zen-zone/static/js/453.d5e8e657.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.862973ab.css",
-    "static/js/main.05ca660c.js"
+    "static/css/main.5a8ce0c4.css",
+    "static/js/main.8be39685.js"
   ]
 }
